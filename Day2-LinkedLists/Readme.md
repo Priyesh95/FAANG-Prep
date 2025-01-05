@@ -163,8 +163,6 @@ else:
     else:
         return None
 
-```
-
 curr.next = prev
 return curr
 ```
