@@ -108,3 +108,63 @@ class MyLinkedList(object):
         
         self.size -= 1
 ```
+
+## Reverse Linked list
+
+```bash
+if not head:
+    return head
+curr = head
+prev = None
+next = curr.next
+
+while curr and next:
+    curr.next = prev
+    prev = curr
+
+    curr = next
+    next = curr.next
+```
+
+## Merge two sorted lists
+```bash
+if list1 and list2:
+    head = None
+    root = None
+    if list1.val > list2.val:
+        head = list2
+        list2 = list2.next
+    else:
+        head = list1
+        list1 = list1.next
+    root = head
+    while list1 and list2:
+        if list1.val > list2.val:
+            head.next = list2
+            head = head.next
+            list2 = list2.next
+        else:
+            head.next = list1
+            head = head.next
+            list1 = list1.next
+    
+    if list1:
+        head.next = list1
+    
+    if list2:
+        head.next = list2
+
+    return root
+else:
+    if list1:
+        return list1
+    elif list2:
+        return list2
+    else:
+        return None
+
+```
+
+curr.next = prev
+return curr
+```
