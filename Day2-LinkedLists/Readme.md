@@ -124,6 +124,9 @@ while curr and next:
 
     curr = next
     next = curr.next
+
+curr.next = prev
+return curr
 ```
 
 ## Merge two sorted lists
